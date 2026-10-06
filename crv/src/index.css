@@ -1,0 +1,198 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --color-slate-900: #0f172a;
+  --color-slate-800: #1e293b;
+  --color-slate-700: #334155;
+  --color-slate-600: #475569;
+  --color-slate-500: #64748b;
+  --color-slate-400: #94a3b8;
+  --color-slate-300: #cbd5e1;
+  --color-emerald-500: #10b981;
+  --color-emerald-400: #34d399;
+  --color-emerald-600: #059669;
+  --color-red-500: #ef4444;
+  --color-red-400: #f87171;
+  --color-amber-500: #f59e0b;
+  --color-amber-400: #fbbf24;
+  --color-blue-500: #3b82f6;
+  --color-blue-400: #60a5fa;
+  --color-purple-500: #a855f7;
+  --color-purple-400: #c084fc;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background: #0f172a;
+    color: #e2e8f0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #334155 #0f172a;
+  }
+
+  *::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #0f172a;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 4px;
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    background: #475569;
+  }
+}
+
+@layer components {
+  .card {
+    background: rgba(30, 41, 59, 0.6);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(51, 65, 85, 0.5);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  .card-highlight {
+    background: linear-gradient(to bottom right, rgba(6, 78, 59, 0.4), rgba(30, 41, 59, 0.6));
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 0 40px rgba(16, 185, 129, 0.1);
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+
+  .badge-green {
+    background: rgba(16, 185, 129, 0.2);
+    color: #34d399;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+  }
+
+  .badge-red {
+    background: rgba(239, 68, 68, 0.2);
+    color: #f87171;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+  }
+
+  .badge-yellow {
+    background: rgba(245, 158, 11, 0.2);
+    color: #fbbf24;
+    border: 1px solid rgba(245, 158, 11, 0.3);
+  }
+
+  .badge-blue {
+    background: rgba(59, 130, 246, 0.2);
+    color: #60a5fa;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+  }
+
+  input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+  }
+
+  button:not(:disabled) {
+    transition: all 0.2s ease;
+  }
+
+  button:not(:disabled):hover {
+    transform: translateY(-1px);
+  }
+
+  button:not(:disabled):active {
+    transform: translateY(0);
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to right, #34d399, #2dd4bf);
+  }
+
+  .glass {
+    background: rgba(30, 41, 59, 0.4);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(51, 65, 85, 0.3);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 40px rgba(16, 185, 129, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 60px rgba(16, 185, 129, 0.2);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+@media (max-width: 768px) {
+  .card, .card-highlight {
+    padding: 1rem;
+  }
+}
+
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+  
+  .card, .card-highlight {
+    background: white;
+    border: 1px solid #ddd;
+    box-shadow: none;
+  }
+}

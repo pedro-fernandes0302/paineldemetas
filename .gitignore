@@ -1,0 +1,27 @@
+# segredos — NUNCA commitar
+.env
+.env.*
+!.env.example
+*.pem
+*service*account*.json
+google_service_account.json
+automacao-*.json
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# node / build
+node_modules/
+dist/
+*.tsbuildinfo
+
+# deploy / editor / logs
+.vercel/
+.firebase/
+.idea/
+.vscode/
+*.log
+.DS_Store

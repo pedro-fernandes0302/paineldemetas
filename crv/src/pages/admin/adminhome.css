@@ -1,0 +1,36 @@
+.status-pulado {
+  color: #fbbf24;
+  font-size: 14px;
+}
+
+.admin-file-input {
+  padding: 8px 12px;
+  border-radius: 8px;
+  background-color: #1e293b;
+  border: 1px dashed #334155;
+  color: #94a3b8;
+  cursor: pointer;
+}
+
+.lista-templates,
+.lista-resultados {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.lista-templates li,
+.lista-resultados li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  color: #cbd5e1;
+  font-size: 14px;
+}

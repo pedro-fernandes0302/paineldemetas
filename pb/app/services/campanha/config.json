@@ -1,0 +1,32 @@
+{
+    "projeto": "seu-projeto-gcp",
+    "bucket": "seu-bucket",
+    "dataset": "cobranca",
+    "tabela_origem": "dados_brutos_com_formulas",
+    "colunas_saida": [
+        "CLIENTE",
+        "MAIS_55",
+        "CREDOR",
+        "RISCO",
+        "VALOR_ATUALIZADO",
+        "VALOR_QUITACAO"
+    ],
+    "credores": {
+        "CARTEIRA_A": "CARTEIRA A",
+        "CARTEIRA_B": "CARTEIRA B",
+        "CARTEIRA_C": "CARTEIRA C",
+        "CARTEIRA_D": "CARTEIRA D",
+        "CARTEIRA_E": "CARTEIRA E",
+        "CARTEIRA_F": "CARTEIRA F",
+        "CARTEIRA_G": "CARTEIRA G",
+        "CARTEIRA_H": "CARTEIRA H",
+        "CARTEIRA_I": "CARTEIRA I",
+        "CARTEIRA_J": "CARTEIRA J",
+        "CARTEIRA_K": "CARTEIRA K",
+        "CARTEIRA_L": "CARTEIRA L",
+        "CARTEIRA_M": "CARTEIRA M",
+        "CARTEIRA_N": "CARTEIRA N",
+        "CARTEIRA_O": "CARTEIRA O",
+        "CARTEIRA_P": "CARTEIRA P"
+    }
+}

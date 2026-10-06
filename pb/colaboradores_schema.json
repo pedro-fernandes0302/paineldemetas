@@ -1,0 +1,8 @@
+[
+  {"name": "email", "type": "STRING", "mode": "REQUIRED"},
+  {"name": "nome", "type": "STRING", "mode": "REQUIRED"},
+  {"name": "cargo", "type": "STRING", "mode": "NULLABLE"},
+  {"name": "equipe", "type": "STRING", "mode": "NULLABLE"},
+  {"name": "digisac_user_id", "type": "STRING", "mode": "REQUIRED"},
+  {"name": "ativo", "type": "BOOL", "mode": "REQUIRED"}
+]
